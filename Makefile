@@ -1,6 +1,6 @@
 build:
 	dep ensure -v
-	env GOOS=linux go build -ldflags="-s -w" -o bin/handler handler/main.go
+	env GOOS=linux go build -ldflags="-s -w" -o bin/handler cmd/handler/*
 
 .PHONY: clean
 clean:

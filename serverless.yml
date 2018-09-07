@@ -59,7 +59,7 @@ functions:
     handler: bin/handler
     events:
       - http:
-          path: handler
+          path: cmd/handler
           method: post
 
 #    The following are a few example events you can configure
