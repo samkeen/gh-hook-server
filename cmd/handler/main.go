@@ -75,7 +75,7 @@ func main() {
 
 func sendStargazeEventToSlack(repo string, stars string, username string, url string) {
 
-	var tmpl = templatization.GetSlackMessageTemplate("NewStargazer")
+	var tmpl = templatization.GetSlackMessageTemplate("newStargazer")
 	var renderedTemplate = templatization.ExecuteTemplate(
 		tmpl,
 		templatization.Payload{repo, stars, username, url})

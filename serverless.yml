@@ -53,6 +53,7 @@ package:
    - ./**
  include:
    - ./bin/**
+   - ./msgtemplates/**
 
 functions:
   hello:

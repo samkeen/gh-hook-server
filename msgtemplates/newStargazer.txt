@@ -1,0 +1,3 @@
+New Github star for _{{ .RepoName }}_ repo!.
+The {{ .RepoName }} repo now has {{ .StartCount }} stars! :tada:.
+Your new fan is <{{ .Username }}|{{.Url}}>

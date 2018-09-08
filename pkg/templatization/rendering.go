@@ -6,6 +6,7 @@ import (
 	"text/template"
 )
 
+const MSG_TEMPLATE_PATH = "./msgtemplates"
 
 type Payload struct {
 	RepoName, StartCount, Username, Url string
@@ -13,7 +14,7 @@ type Payload struct {
 
 func GetSlackMessageTemplate(templateName string) (*template.Template) {
 	tmpl := template.New(templateName + ".txt")
-	tmpl, err := tmpl.Parse(SlackMessages[templateName])
+	tmpl, err := tmpl.ParseFiles(MSG_TEMPLATE_PATH + "/" + templateName + ".txt")
 	if err != nil {
 		log.Fatal("Parse: ", err)
 		panic("Unable to parse tmpl")
