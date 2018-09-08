@@ -1,4 +1,4 @@
-package templates
+package templatization
 
 // TODO convert this to a struct for type safty
 var SlackMessages = map[string]string{

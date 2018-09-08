@@ -2,7 +2,6 @@ package templatization
 
 import (
 	"bytes"
-	"github.com/samkeen/github-webhook-serverless/templates"
 	"log"
 	"text/template"
 )
@@ -14,7 +13,7 @@ type Payload struct {
 
 func GetSlackMessageTemplate(templateName string) (*template.Template) {
 	tmpl := template.New(templateName + ".txt")
-	tmpl, err := tmpl.Parse(templates.SlackMessages[templateName])
+	tmpl, err := tmpl.Parse(SlackMessages[templateName])
 	if err != nil {
 		log.Fatal("Parse: ", err)
 		panic("Unable to parse tmpl")
